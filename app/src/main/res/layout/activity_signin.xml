@@ -76,8 +76,15 @@
             android:id="@+id/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:paddingLeft="4dp"
             android:hint="Email-id"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxCornerRadiusBottomStart="35dp"
+            android:paddingStart="5dp"
+            app:boxStrokeColor="#965C11"
+            app:boxBackgroundMode="outline"
+            android:textColorHint="#965C11"
             android:transitionName="signin_usrname">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -90,7 +97,12 @@
             android:id="@+id/password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:textColorHint="#965C11"
+            android:paddingLeft="5dp"
+            app:boxStrokeColor="#965C11"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxCornerRadiusBottomStart="35dp"
             android:hint="Password"
             android:transitionName="signin_pswrd"
             app:passwordToggleEnabled="true">
@@ -116,12 +128,13 @@
 
             <Button
                 android:id="@+id/loginbtn"
-                android:layout_width="124dp"
+                android:layout_width="109dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="0dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/inputfield"
+                android:fontFamily="@font/sf_pro_display_semibold"
                 android:text="Sign in "
                 android:textAllCaps="false"
                 android:textColor="#fff"
@@ -130,12 +143,12 @@
             <Button
                 android:id="@+id/forgetbtn"
                 android:layout_width="150dp"
-                android:layout_height="58dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="right"
-                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
                 android:background="#00000000"
                 android:elevation="0dp"
-                android:text="Need help?"
+                android:text="Forgot Password?"
                 android:textAllCaps="false"
                 android:textColor="#000000" />
 
@@ -144,16 +157,17 @@
 
         <Button
             android:id="@+id/callsignup"
-            android:layout_width="118dp"
+            android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_gravity="left"
+            android:paddingStart="10dp"
             android:layout_marginBottom="5dp"
             android:background="#00000000"
             android:elevation="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="New User? Regiter!"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="New User? Register Here!"
             android:textAllCaps="false"
-            android:textColor="#000000"
+            android:textColor="#965C11"
             android:textSize="12sp"
             android:transitionName="btn2_trans" />
 

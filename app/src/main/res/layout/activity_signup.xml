@@ -2,10 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
+    android:background="#C6C9B9"
     tools:context="com.example.contacttracing.Signup">
 
     <LinearLayout
@@ -13,7 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
@@ -31,7 +32,7 @@
             android:layout_marginTop="28dp"
 
             android:layout_marginBottom="16dp"
-            android:src="@drawable/yoga_icon1"
+            android:src="@drawable/logo_image"
             android:transitionName="logo_image"
             app:layout_constraintBottom_toTopOf="@+id/signup_wel"
             app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +48,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/sf_pro_displaybold"
-            android:text="Welcome"
-            android:textColor="#000000"
+            android:text="Welcome!!"
+            android:textColor="#965C11"
             android:textSize="40sp"
             android:transitionName="title_text"
             app:layout_constraintBottom_toTopOf="@+id/signup_tag"
@@ -63,7 +64,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/sf_pro_display_regular"
+            android:fontFamily="@font/sf_pro_display_light"
             android:text="Create a New Account"
             android:textColor="#000000"
             android:textSize="18sp"
@@ -80,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="32dp"
         android:orientation="vertical"
         android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,9 +95,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:hint="@string/name"
-            android:transitionName="signin_usrname">
+            android:paddingStart="5dp"
+            android:textColorHint="#965C11"
+            android:transitionName="signin_usrname"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomStart="35dp"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxStrokeColor="#965C11">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -109,7 +115,13 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone no.">
+            android:hint="Phone no."
+            android:paddingStart="5dp"
+            android:textColorHint="#965C11"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomStart="35dp"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxStrokeColor="#965C11">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/signup_phno"
@@ -124,7 +136,13 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email-id">
+            android:hint="Email-id"
+            android:paddingStart="5dp"
+            android:textColorHint="#965C11"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomStart="35dp"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxStrokeColor="#965C11">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -138,7 +156,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:paddingStart="5dp"
+            android:textColorHint="#965C11"
             android:transitionName="signin_pswrd"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomStart="35dp"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxStrokeColor="#965C11"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -149,30 +173,32 @@
 
         <Button
             android:id="@+id/signupbtn"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginVertical="20dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:background="#000"
-            android:text="Signup"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/inputfield"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="Sign up"
+            android:textAllCaps="false"
             android:textColor="#fff"
             android:transitionName="btn1_trans" />
 
         <Button
             android:id="@+id/already_btn"
-            android:layout_width="match_parent"
+            android:layout_width="249dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="left"
             android:layout_margin="0dp"
             android:layout_marginTop="1dp"
             android:background="#00000000"
             android:elevation="0dp"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/sf_pro_display_semibold"
             android:text="Already have a account? Login!"
             android:textAllCaps="false"
             android:textColor="#000000"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:transitionName="btn2_trans" />
 
     </LinearLayout>
