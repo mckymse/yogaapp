@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ContactTracing</string>
+    <string name="contacttrace">Yoga</string>
+    <string name="stay_home_stay_safe">Stay Fit!! Stay Safe!!</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+</resources>

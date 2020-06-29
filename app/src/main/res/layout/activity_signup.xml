@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context="com.example.contacttracing.Signup">
+
+    <ImageView
+        android:id="@+id/signup_icon"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/yoga_icon1"
+        android:transitionName="logo_image" />
+
+    <TextView
+        android:id="@+id/signup_wel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:text="Welcome"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:transitionName="title_text"
+        tools:layout_editor_absoluteX="65dp" />
+
+    <TextView
+        android:id="@+id/signup_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:text="Create a New Account"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:transitionName="title_tag"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="177dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_pswrd"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:transitionName="signin_pswrd"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ph_no"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone no.">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_phno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_nametxt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/name"
+            android:transitionName="signin_usrname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email-id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signupbtn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#000"
+            android:text="Signup"
+            android:textColor="#fff"
+            android:transitionName="btn1_trans" />
+
+        <Button
+            android:id="@+id/already_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="0dp"
+            android:layout_marginTop="1dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Already have a account? Login!"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:transitionName="btn2_trans" />
+
+    </LinearLayout>
+
+</LinearLayout>
