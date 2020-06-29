@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
                 startActivity(intent, options.toBundle());
+                finish();
             }
         }, INTRO_SCREEN);
 

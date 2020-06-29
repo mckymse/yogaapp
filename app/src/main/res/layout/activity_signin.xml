@@ -1,59 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/signin_email"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:orientation="vertical"
     android:padding="30dp"
+    android:background="#C6C9B9"
     tools:context="com.example.contacttracing.Signin">
 
-    <ImageView
-        android:id="@+id/signin_icon"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/yoga_icon1"
-        android:transitionName="logo_image" />
-
-    <TextView
-        android:id="@+id/signin_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="Proceed with your"
-        android:transitionName="title_tag"
-        android:textColor="#000000"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/signin_tag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Login"
-        android:textColor="#000000"
-        android:textSize="40sp"
-        android:transitionName="title_text" />
-
     <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/layout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/signin_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_image"
+            android:transitionName="logo_image"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="3dp" />
+
+        <TextView
+            android:id="@+id/signin_name"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sf_pro_displaybold"
+            android:text="Hello There!"
+            android:textColor="#965C11"
+
+            android:textSize="30sp"
+            android:transitionName="title_tag"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="170dp" />
+
+        <TextView
+            android:id="@+id/signin_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_light"
+            android:text="Nice to see you again.."
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:transitionName="title_text"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="240dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:transitionName="signin_usrname"
-            android:hint="Email-id">
+            android:hint="Email-id"
+            android:transitionName="signin_usrname">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/signin_email"
+                android:id="@+id/layout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -74,44 +102,61 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/forgetbtn"
-            android:layout_width="150dp"
-            android:layout_height="20dp"
-            android:layout_gravity="right"
-            android:layout_margin="5dp"
-            android:background="#00000000"
-            android:elevation="0dp"
-            android:text="Forgot Password?"
-            android:textAllCaps="false"
-            android:textColor="#000000" />
-
-        <Button
-            android:id="@+id/loginbtn"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="#000"
-            android:text="Login"
-            android:textColor="#fff"
-            android:transitionName="btn1_trans"/>
+            android:layout_height="74dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout">
+
+            <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/inputfield"
+                android:text="Sign in "
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:transitionName="btn1_trans" />
+
+            <Button
+                android:id="@+id/forgetbtn"
+                android:layout_width="150dp"
+                android:layout_height="58dp"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:text="Need help?"
+                android:textAllCaps="false"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/callsignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="5dp"
+            android:layout_width="118dp"
+            android:layout_height="22dp"
+            android:layout_gravity="left"
+            android:layout_marginBottom="5dp"
             android:background="#00000000"
             android:elevation="0dp"
             android:fontFamily="sans-serif-medium"
-            android:text="New User? Sign up!!"
+            android:text="New User? Regiter!"
             android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="12sp"
-            android:transitionName="btn2_trans"/>
+            android:transitionName="btn2_trans" />
 
 
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
