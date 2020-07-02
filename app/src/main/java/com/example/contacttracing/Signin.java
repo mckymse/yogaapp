@@ -2,11 +2,13 @@ package com.example.contacttracing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,6 +24,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Signin extends AppCompatActivity {
+
+    public static final String TAG = "TAG";
     Button callsignUp,loginBtn;
     ImageView signinLogo;
     TextView signinTitle,signinTag;
@@ -47,8 +51,11 @@ public class Signin extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email=username.getEditText().toString().trim();
-                String pass = password.getEditText().toString().trim();
+                String email=username.getEditText().getText().toString().trim();
+                String pass = password.getEditText().getText().toString().trim();
+
+                Log.d(TAG, "onClick: "+email);
+                Log.d(TAG, "onClick: "+pass);
 
 
                 if(TextUtils.isEmpty(email)){
