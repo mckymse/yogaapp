@@ -94,4 +94,13 @@ public class Signin extends AppCompatActivity {
         Intent intent = new Intent(Signin.this,Signup.class);
         startActivity(intent);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(firebaseAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),Homepage.class));
+            finish();
+        }
+    }
 }
