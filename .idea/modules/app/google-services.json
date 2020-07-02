@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "290932451134",
+    "firebase_url": "https://yoga1-952f3.firebaseio.com",
+    "project_id": "yoga1-952f3",
+    "storage_bucket": "yoga1-952f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290932451134:android:241d71cf1c6f0537412e6f",
+        "android_client_info": {
+          "package_name": "com.example.contacttracing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290932451134-5nl2vnmckrvc99kbk5i8boo4oglpm5qe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.contacttracing",
+            "certificate_hash": "a3191fca8960304a9dfcd2ac27dc3b20b0850dba"
+          }
+        },
+        {
+          "client_id": "290932451134-h8cshpbu29mejjvbj7g18f48cseoo44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOgwg0QN9XBTYJrhhADd8hqs8aMimrd6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290932451134-h8cshpbu29mejjvbj7g18f48cseoo44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

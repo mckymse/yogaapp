@@ -4,4 +4,6 @@
     <string name="stay_home_stay_safe">Stay Fit!! Stay Safe!!</string>
     <string name="todo">TODO</string>
     <string name="name">Name</string>
+    <string name="page">In homepage</string>
+    <string name="logout">LOGOUT</string>
 </resources>

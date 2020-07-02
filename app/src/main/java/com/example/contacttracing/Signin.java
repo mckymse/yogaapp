@@ -1,24 +1,32 @@
 package com.example.contacttracing;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Signin extends AppCompatActivity {
     Button callsignUp,loginBtn;
     ImageView signinLogo;
     TextView signinTitle,signinTag;
     TextInputLayout username,password;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,29 +40,51 @@ public class Signin extends AppCompatActivity {
         username = (TextInputLayout)findViewById(R.id.username);
         password = (TextInputLayout)findViewById(R.id.password);
         loginBtn = (Button)findViewById(R.id.loginbtn);
+        firebaseAuth=FirebaseAuth.getInstance();
 
 
 
-        callsignUp.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Signin.this,Signup.class);
+            public void onClick(View v) {
+                String email=username.getEditText().toString().trim();
+                String pass = password.getEditText().toString().trim();
 
-                Pair[] pairs = new Pair[7];
 
-                pairs[0] = new Pair<View,String>(signinLogo,"logo_image");
-                pairs[1] = new Pair<View,String>(signinTitle,"title_tag");
-                pairs[2] = new Pair<View,String>(signinTag,"title_text");
-                pairs[3] = new Pair<View,String>(username,"signin_usrname");
-                pairs[4] = new Pair<View,String>(password,"signin_pswrd");
-                pairs[5] = new Pair<View,String>(loginBtn,"btn1_trans");
-                pairs[6] = new Pair<View,String>(callsignUp,"btn2_trans");
+                if(TextUtils.isEmpty(email)){
+                    username.setError("Email is required");
+                    return;
+                }
+                if(TextUtils.isEmpty(pass)){
+                    password.setError("Password is required");
+                    return;
+                }
+                if(pass.length()<6){
+                    password.setError("Password must be greater than or equal to 6 characters");
+                    return;
+                }
 
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Signin.this, pairs);
-
-                startActivity(intent,options.toBundle());
-
+                firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(Signin.this,"Logged in Successfully",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        }
+                        else{
+                            Toast.makeText(Signin.this,"Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
+
+
+
+    }
+
+    public void signup(View view) {
+        Intent intent = new Intent(Signin.this,Signup.class);
+        startActivity(intent);
     }
 }

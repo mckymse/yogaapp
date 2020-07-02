@@ -169,6 +169,7 @@
             android:textAllCaps="false"
             android:textColor="#965C11"
             android:textSize="12sp"
+            android:onClick="signup"
             android:transitionName="btn2_trans" />
 
 
