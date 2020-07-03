@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="#C6C9B9"
+    android:background="@color/colorPrimary"
     tools:context="com.example.contacttracing.Signup">
 
     <LinearLayout
@@ -30,7 +30,7 @@
             android:layout_height="140dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="28dp"
-
+            android:contentDescription="@string/empty"
             android:layout_marginBottom="16dp"
             android:src="@drawable/logo_image"
             android:transitionName="logo_image"
@@ -48,7 +48,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/sf_pro_displaybold"
-            android:text="Welcome!!"
+            android:text="@string/welcome"
             android:textColor="#965C11"
             android:textSize="40sp"
             android:transitionName="title_text"
@@ -65,7 +65,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/sf_pro_display_light"
-            android:text="Create a New Account"
+            android:text="@string/create_a_new_account"
             android:textColor="#000000"
             android:textSize="18sp"
             android:transitionName="title_tag"
@@ -115,7 +115,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone no."
+            android:hint="@string/phone_no"
             android:paddingStart="5dp"
             android:textColorHint="#965C11"
             app:boxBackgroundMode="outline"
@@ -136,7 +136,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email-id"
+            android:hint="@string/email_id"
             android:paddingStart="5dp"
             android:textColorHint="#965C11"
             app:boxBackgroundMode="outline"
@@ -155,7 +155,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/password"
             android:paddingStart="5dp"
             android:textColorHint="#965C11"
             android:transitionName="signin_pswrd"
@@ -171,36 +171,44 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/signupbtn"
-            android:layout_width="109dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/inputfield"
-            android:fontFamily="@font/sf_pro_display_semibold"
-            android:text="Sign up"
-            android:textAllCaps="false"
-            android:textColor="#fff"
-            android:transitionName="btn1_trans" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/already_btn"
-            android:layout_width="249dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_margin="0dp"
-            android:layout_marginTop="1dp"
-            android:background="#00000000"
-            android:elevation="0dp"
-            android:fontFamily="@font/sf_pro_display_semibold"
-            android:text="Already have a account? Login!"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="15sp"
-            android:onClick="signin"
-            android:transitionName="btn2_trans" />
+            <Button
+                android:id="@+id/signupbtn"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/inputfield"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+
+                android:transitionName="btn1_trans" />
+
+            <Button
+                android:id="@+id/already_btn"
+                android:layout_width="215dp"
+                android:layout_height="65dp"
+                android:layout_gravity="right"
+                android:layout_margin="10dp"
+                android:layout_marginTop="40dp"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:onClick="signin"
+                android:text="@string/already_have_a_account_login"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:transitionName="btn2_trans" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

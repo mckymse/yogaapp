@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.contacttracing.MainActivity"
-    android:background="#C6C9B9">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="0dp"
-        android:layout_height="267dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:contentDescription="@string/todo"
@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/sf_pro_displaybold"
@@ -42,10 +42,10 @@
 
     <TextView
         android:id="@+id/tagline"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_pro_display_regular"
-        android:text="A way of connecting your body to the soul!"
+        android:text="@string/a_way_of_connecting_your_body_to_the_soul"
         android:textAlignment="center"
         android:textColor="#707070"
         android:textSize="20sp"

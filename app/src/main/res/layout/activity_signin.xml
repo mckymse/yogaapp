@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,9 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/layout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +33,7 @@
 
         <TextView
             android:id="@+id/signin_name"
-            android:layout_width="185dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/sf_pro_displaybold"
@@ -65,10 +64,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="64dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout">
 
@@ -76,16 +76,19 @@
             android:id="@+id/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:paddingLeft="4dp"
-            android:hint="Email-id"
-            app:boxCornerRadiusTopEnd="35dp"
-            app:boxCornerRadiusBottomStart="35dp"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
             android:paddingStart="5dp"
-            app:boxStrokeColor="#965C11"
-            app:boxBackgroundMode="outline"
+            android:paddingLeft="4dp"
             android:textColorHint="#965C11"
-            android:transitionName="signin_usrname">
+            android:transitionName="signin_usrname"
+            app:boxBackgroundMode="outline"
+
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="#965C11">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/layout1"
@@ -97,14 +100,16 @@
             android:id="@+id/password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:textColorHint="#965C11"
-            android:paddingLeft="5dp"
-            app:boxStrokeColor="#965C11"
-            app:boxCornerRadiusTopEnd="35dp"
-            app:boxCornerRadiusBottomStart="35dp"
+            android:layout_height="wrap_content"
             android:hint="Password"
+            android:paddingLeft="5dp"
+            android:textColorHint="#965C11"
             android:transitionName="signin_pswrd"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="#965C11"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -116,7 +121,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
@@ -134,6 +139,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/inputfield"
+                android:elevation="40dp"
                 android:fontFamily="@font/sf_pro_display_semibold"
                 android:text="Sign in "
                 android:textAllCaps="false"
@@ -143,7 +149,7 @@
             <Button
                 android:id="@+id/forgetbtn"
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
+                android:layout_height="69dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="5dp"
                 android:background="#00000000"
@@ -158,18 +164,18 @@
         <Button
             android:id="@+id/callsignup"
             android:layout_width="wrap_content"
-            android:layout_height="22dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:paddingStart="10dp"
             android:layout_marginBottom="5dp"
             android:background="#00000000"
             android:elevation="0dp"
             android:fontFamily="@font/sf_pro_display_semibold"
+            android:onClick="signup"
+            android:paddingStart="10dp"
             android:text="New User? Register Here!"
             android:textAllCaps="false"
             android:textColor="#965C11"
-            android:textSize="12sp"
-            android:onClick="signup"
+            android:textSize="15sp"
             android:transitionName="btn2_trans" />
 
 

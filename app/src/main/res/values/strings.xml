@@ -6,4 +6,13 @@
     <string name="name">Name</string>
     <string name="page">In homepage</string>
     <string name="logout">LOGOUT</string>
+    <string name="a_way_of_connecting_your_body_to_the_soul">A way of connecting your body to the soul!</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_have_a_account_login">Already have a account? Login</string>
+    <string name="welcome">Welcome!!</string>
+    <string name="create_a_new_account">Create a New Account</string>
+    <string name="email_id">Email-id</string>
+    <string name="phone_no">Phone no.</string>
+    <string name="empty">empty</string>
 </resources>
