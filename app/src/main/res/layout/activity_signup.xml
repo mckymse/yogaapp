@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/phone_no"
             android:paddingStart="5dp"
-            android:textColorHint="#965C11"
+            android:textColorHint="@color/colorPrimaryDark"
             app:boxBackgroundMode="outline"
             app:boxCornerRadiusBottomStart="35dp"
             app:boxCornerRadiusTopEnd="35dp"
