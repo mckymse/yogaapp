@@ -3,10 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:fillViewport="true"
-
-   >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <androidx.constraintlayout.widget.ConstraintLayout
 
     android:layout_width="match_parent"
@@ -104,55 +103,55 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ac_layout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ac_layout1"
-            app:layout_constraintVertical_bias="0.0">
+    <LinearLayout
+        android:id="@+id/ac_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ac_layout1"
+        app:layout_constraintVertical_bias="0.0">
 
-            .
 
-            <ImageView
-                android:id="@+id/faq"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:elevation="40dp"
-                android:src="@drawable/ic_faq" />
 
-            <ImageView
-                android:id="@+id/invite"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:elevation="40dp"
-                android:src="@drawable/ic_invite" />.
+        <ImageView
+            android:id="@+id/faq"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="40dp"
+            android:src="@drawable/ic_faq" />
 
-            <ImageView
-                android:id="@+id/terms"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:elevation="40dp"
-                android:src="@drawable/ic_terms" />.
+        <ImageView
+            android:id="@+id/invite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="40dp"
+            android:src="@drawable/ic_invite" />.
 
-            <ImageView
-                android:id="@+id/about"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:elevation="40dp"
-                android:src="@drawable/ic_about" />.
+        <ImageView
+            android:id="@+id/terms"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="40dp"
+            android:src="@drawable/ic_terms" />.
 
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/about"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="40dp"
+            android:src="@drawable/ic_about" />.
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
